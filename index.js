@@ -9,12 +9,12 @@ const connection = mysql.createConnection({
 })
 
 //Inserting New Data
-let q = "INSERT INTO user (id, username, email, password) VALUES(?,?,?,?)";
-let user2 = ["123", "123_newuser", "abc@gmail.com", "abc"];
-let user3 = ["123", "123_newuser", "abc@gmail.com", "abc"];
+let q = "INSERT INTO user (id, username, email, password) VALUES ?";
+let users = [["123b", "123_newuserb", "abc@gmail.comb", "abcb"],
+            ["123c", "123_newuserc", "abc@gmail.comc", "abcc"]];
 
 try{
-    connection.query(q, user, (err, result) => {
+    connection.query(q, [users], (err, result) => {
         if(err) throw err;
         console.log(result);
     })
