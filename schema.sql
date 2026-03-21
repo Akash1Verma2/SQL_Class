@@ -5,5 +5,5 @@ CREATE TABLE IF NOT EXISTS user (
     password VARCHAR(50) NOT NULL
 );
 
-INSERT INTO user (id, username, email, password)
-VALUES ('1029','akash123', 'akash123@gmail.com', '12345');
+DELETE FROM user
+WHERE id = '1028';
